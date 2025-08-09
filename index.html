@@ -28,7 +28,32 @@
         .autor {
             font-size: 1.3em;
             font-weight: normal;
-            margin: 0 0 70px 0; /* lleugerament més espai abans dels botons */
+            margin: 0 0 60px 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            margin-bottom: 120px; /* distància doblada fins a les imatges */
+        }
+        .btn {
+            display:inline-block;
+            font-size: 1.3em;
+            padding: 30px 24px;
+            border: 2px solid #666; /* gris suau */
+            border-radius: 0;
+            background-color: #fff;
+            color: #666; /* text gris suau */
+            text-decoration: none;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            min-width: 130px;
+        }
+        .btn:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
         }
 
         .logos {
@@ -47,32 +72,7 @@
             width: 60px;
             max-width: 25%;
             height: auto;
-            margin: 40px 0;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 40px;  /* més espai des del nom */
-            margin-bottom: 60px; /* més espai fins a les imatges */
-        }
-        .btn {
-            display:inline-block;
-            font-size: 1.3em;
-            padding: 30px 24px;
-            border: 2px solid #666;
-            border-radius: 0;
-            background-color: #fff;
-            color: #666;
-            text-decoration: none;
-            box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            min-width: 130px;
-        }
-        .btn:hover {
-            background-color: #e6e6e6;
-            transform: translateY(-2px);
+            margin: 20px 0;
         }
 
         .license {
@@ -90,7 +90,7 @@
             left: 15px;
             right: 15px;
             height: 0;
-            border-top: 1px solid #000;
+            border-top: 1px solid #000; /* línia fina */
         }
         .license::before { top: 0; }
         .license::after { bottom: 0; }
@@ -100,7 +100,7 @@
             top: 15px;
             bottom: 15px;
             width: 0;
-            border-left: 1px solid #000;
+            border-left: 1px solid #000; /* línia fina */
         }
         .license > .left-line { left: 0; }
         .license > .right-line { right: 0; }
@@ -121,7 +121,7 @@
         @media (max-width: 420px) {
             h1 { font-size: 2.2em; }
             h2 { font-size: 1em; margin-bottom: 30px; }
-            .autor { font-size: 1.1em; margin-bottom: 50px; }
+            .autor { font-size: 1.1em; margin-bottom: 40px; }
             .emblema { width: 100px; }
             .logo-unio { width: 48px; }
             .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
@@ -135,13 +135,11 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <!-- Botons abans -->
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <!-- Imatges després -->
     <div class="logos">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
