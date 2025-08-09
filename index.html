@@ -6,10 +6,10 @@
     <title>Juan Camilo - Pasdoble-sonata</title>
     <style>
         body {
-            font-family: "Times New Roman", Times, serif;
+            font-family: Garamond, "Times New Roman", Times, serif;
             text-align: center;
             background-color: #f9f9f9;
-            color: #333333; /* negre suau */
+            color: #000;
             margin: 0;
             padding: 40px;
         }
@@ -53,7 +53,7 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 25px; /* distància entre botons reduïda */
+            gap: 25px;
             margin-top: 30px;
             margin-bottom: 80px;
         }
@@ -61,10 +61,10 @@
             display:inline-block;
             font-size: 1.3em;
             padding: 30px 24px;
-            border: 2px solid #666; /* gris suau */
+            border: 2px solid #666;
             border-radius: 0;
             background-color: #fff;
-            color: #666; /* text gris suau */
+            color: #666;
             text-decoration: none;
             box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
             transition: background-color 0.2s ease, transform 0.1s ease;
@@ -90,7 +90,7 @@
             left: 15px;
             right: 15px;
             height: 0;
-            border-top: 1px solid #333333; /* línia fina negre suau */
+            border-top: 1px solid #000;
         }
         .license::before { top: 0; }
         .license::after { bottom: 0; }
@@ -100,14 +100,14 @@
             top: 15px;
             bottom: 15px;
             width: 0;
-            border-left: 1px solid #333333; /* línia fina negre suau */
+            border-left: 1px solid #000;
         }
         .license > .left-line { left: 0; }
         .license > .right-line { right: 0; }
 
         .license-text {
             font-size: 0.85em;
-            color: #333333; /* text negre suau */
+            color: #333;
             margin-bottom: 6px;
             line-height: 1.2;
             text-align: center;
@@ -116,8 +116,6 @@
             width: 48px;
             height: auto;
             display: block;
-            filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(96%) contrast(85%);
-            /* converteix el negre pur de la imatge a un gris fosc similar a #333 */
         }
 
         @media (max-width: 420px) {
