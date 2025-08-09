@@ -53,9 +53,10 @@
             display: inline-block;
             font-size: 1.2em;
             color: rgba(0,0,0,0.5);
-            padding: 0 4px; /* línia més junteta a la clau */
+            padding: 0 4px;
         }
 
+        /* Botons en horitzontal */
         .button-container {
             display: flex;
             justify-content: center;
@@ -81,6 +82,7 @@
             transform: translateY(-2px);
         }
 
+        /* Imatges en columna i sense deformació */
         .logos {
             display: flex;
             flex-direction: column;
@@ -89,15 +91,12 @@
         }
         .emblema {
             width: 120px;
-            max-width: 40%;
             height: auto;
-            margin-bottom: 3px;
+            margin-bottom: 20px;
         }
         .logo-unio {
             width: 60px;
-            max-width: 25%;
             height: auto;
-            margin: 40px 0;
         }
 
         .license {
@@ -162,14 +161,14 @@
 
     <div class="separator"><span>𝄞</span></div>
 
-    <div class="logos">
+    <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
     <div class="separator"><span>𝄞</span></div>
 
-    <div class="button-container">
+    <div class="logos">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
         <img class="logo-unio" alt="Logo Unió Musical l'Horta"
