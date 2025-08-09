@@ -35,7 +35,7 @@
         /* Separador decoratiu */
         .separator {
             position: relative;
-            margin: 35px auto; /* homogènia i àmplia */
+            margin: 40px auto; /* homogeni per tot arreu */
             width: 80%;
             text-align: center;
         }
@@ -44,7 +44,7 @@
             content: "";
             position: absolute;
             top: 50%;
-            width: 42%;
+            width: 45%;
             height: 1px;
             background-color: rgba(0,0,0,0.1);
         }
@@ -54,14 +54,14 @@
             display: inline-block;
             font-size: 1.2em;
             color: rgba(0,0,0,0.5);
-            padding: 0 4px; /* abans 12px, ara més junt a la línia */
+            padding: 0 1px; /* molt més junt a les línies */
         }
 
         .button-container {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 0 auto;
+            margin: 40px 0; /* distància àmplia i igual per dalt i baix */
         }
         .btn {
             display:inline-block;
@@ -107,7 +107,7 @@
             flex-direction: column;
             align-items: center;
             max-width: 280px;
-            margin-top: 0;
+            margin-top: 40px;
         }
         .license::before,
         .license::after {
@@ -176,6 +176,8 @@
         <img class="logo-unio" alt="Logo Unió Musical l'Horta"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
+
+    <div class="separator"><span>𝄞</span></div>
 
     <div class="license" aria-label="Llicència">
         <div class="left-line"></div>
