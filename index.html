@@ -35,7 +35,7 @@
         /* Separador decoratiu */
         .separator {
             position: relative;
-            margin: 20px auto; /* abans 50px, reduït */
+            margin: 35px auto; /* homogènia i àmplia */
             width: 80%;
             text-align: center;
         }
@@ -44,7 +44,7 @@
             content: "";
             position: absolute;
             top: 50%;
-            width: 40%;
+            width: 42%;
             height: 1px;
             background-color: rgba(0,0,0,0.1);
         }
@@ -54,14 +54,14 @@
             display: inline-block;
             font-size: 1.2em;
             color: rgba(0,0,0,0.5);
-            padding: 0 12px;
+            padding: 0 4px; /* abans 12px, ara més junt a la línia */
         }
 
         .button-container {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin-bottom: 60px;
+            margin: 0 auto;
         }
         .btn {
             display:inline-block;
@@ -107,7 +107,7 @@
             flex-direction: column;
             align-items: center;
             max-width: 280px;
-            margin-top: 0; /* abans 40px, ara 0 perquè hem tret el separador */
+            margin-top: 0;
         }
         .license::before,
         .license::after {
