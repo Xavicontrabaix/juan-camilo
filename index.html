@@ -28,7 +28,7 @@
         .autor {
             font-size: 1.3em;
             font-weight: normal;
-            margin: 0 0 60px 0;
+            margin: 0 0 70px 0; /* lleugerament més espai abans dels botons */
         }
 
         .logos {
@@ -54,8 +54,8 @@
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin-top: 30px;
-            margin-bottom: 80px;
+            margin-top: 40px;  /* més espai des del nom */
+            margin-bottom: 60px; /* més espai fins a les imatges */
         }
         .btn {
             display:inline-block;
@@ -121,7 +121,7 @@
         @media (max-width: 420px) {
             h1 { font-size: 2.2em; }
             h2 { font-size: 1em; margin-bottom: 30px; }
-            .autor { font-size: 1.1em; margin-bottom: 40px; }
+            .autor { font-size: 1.1em; margin-bottom: 50px; }
             .emblema { width: 100px; }
             .logo-unio { width: 48px; }
             .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
@@ -135,13 +135,13 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <!-- Botons ara apareixen abans que les imatges -->
+    <!-- Botons abans -->
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <!-- Imatges ara estan on abans estaven els botons -->
+    <!-- Imatges després -->
     <div class="logos">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
