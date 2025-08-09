@@ -58,14 +58,14 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 25px; /* més espai entre botons */
+            gap: 25px;
             margin-top: 30px;
-            margin-bottom: 80px; /* espai gran abans de la llicència */
+            margin-bottom: 80px;
         }
         .btn {
             display:inline-block;
             font-size: 1em;
-            padding: 20px 20px; /* més altura, més quadrat */
+            padding: 20px 20px;
             border: 1px solid #000;
             border-radius: 0;
             background-color: #fff;
@@ -73,37 +73,39 @@
             text-decoration: none;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
             transition: background-color 0.2s ease;
-            min-width: 120px; /* assegurar certa amplària */
+            min-width: 120px;
         }
         .btn:hover {
             background-color: #e6e6e6;
         }
 
-        /* Llicència: text + imatge + marc de línies separades */
+        /* Llicència amb línies separades */
         .license {
             position: relative;
-            padding: 20px 10px;
+            padding: 20px 25px; /* més espai lateral */
             display: inline-flex;
             flex-direction: column;
             align-items: center;
+            max-width: 280px;
         }
-        /* Línies independents */
+        /* Línies horitzontals */
         .license::before,
         .license::after {
             content: "";
             position: absolute;
-            left: 0;
-            right: 0;
+            left: 15px;
+            right: 15px;
             height: 0;
             border-top: 1px solid #000;
         }
         .license::before { top: 0; }
         .license::after { bottom: 0; }
+        /* Línies verticals */
         .license > .left-line,
         .license > .right-line {
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 15px;
+            bottom: 15px;
             width: 0;
             border-left: 1px solid #000;
         }
@@ -111,7 +113,7 @@
         .license > .right-line { right: 0; }
 
         .license-text {
-            font-size: 0.95em;
+            font-size: 0.85em; /* un poc més xicotet */
             color: #333;
             margin-bottom: 6px;
             line-height: 1.2;
@@ -161,9 +163,4 @@
         </div>
         <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
             <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
-                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
-        </a>
-    </div>
-
-</body>
-</html>
+                 alt="Llicència Creative Commons CC BY
