@@ -117,4 +117,50 @@
             height: auto;
             display: block;
             filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(96%) contrast(85%);
-            /* con*
+            /* converteix el negre pur de la imatge a un gris fosc similar a #333 */
+        }
+
+        @media (max-width: 420px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1em; margin-bottom: 30px; }
+            .autor { font-size: 1.1em; margin-bottom: 40px; }
+            .emblema { width: 100px; }
+            .logo-unio { width: 48px; }
+            .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
+            .license a img { width: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Juan Camilo</h1>
+    <h2>Pasdoble-sonata per a banda simfònica</h2>
+    <div class="autor">Xavier Garí Zanón</div>
+
+    <div class="logos">
+        <img class="emblema" alt="Emblema personal"
+             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
+        <img class="logo-unio" alt="Logo Unió Musical l'Horta"
+             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
+    </div>
+
+    <div class="button-container">
+        <a class="btn" href="#" role="button">Veure partitura</a>
+        <a class="btn" href="#" role="button">Escoltar àudio</a>
+    </div>
+
+    <div class="license" aria-label="Llicència">
+        <div class="left-line"></div>
+        <div class="right-line"></div>
+        <div class="license-text">
+            © Xavier Garí Zanón. 2025, València.<br>
+            Llicència Creative Commons CC BY-NC-ND 4.0
+        </div>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
+                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
+        </a>
+    </div>
+
+</body>
+</html>
