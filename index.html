@@ -15,7 +15,7 @@
             padding: 40px;
         }
 
-        /* Títol i subtítol */
+        /* Títol, subtítol i autor */
         h1 {
             font-size: 3em;
             margin: 0 0 12px 0;
@@ -23,86 +23,111 @@
         }
         h2 {
             font-size: 1.1em;
-            margin: 0 0 60px 0; /* espai ampliat entre subtítol i imatges */
+            margin: 0 0 40px 0;
             font-style: normal;
             font-weight: normal;
         }
+        .autor {
+            font-size: 1.3em;
+            font-weight: normal;
+            font-style: normal;
+            margin: 0 0 60px 0;
+        }
 
-        /* Contenidor d'imatges (columna vertical) */
+        /* Contenidor d'imatges */
         .logos {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 30px;
         }
-
         .emblema {
             width: 120px;
             max-width: 40%;
             height: auto;
-            margin-bottom: 24px; /* espai entre emblema i logo */
+            margin-bottom: 24px;
         }
-
         .logo-unio {
-            width: 60px;       /* mida reduïda (la meitat de l'original) */
+            width: 60px;
             max-width: 25%;
             height: auto;
-            margin: 40px 0;    /* més espai amunt i avall */
+            margin: 40px 0;
         }
 
         /* Botons */
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 25px; /* més espai entre botons */
             margin-top: 30px;
+            margin-bottom: 80px; /* espai gran abans de la llicència */
         }
         .btn {
             display:inline-block;
             font-size: 1em;
-            padding: 10px 20px;
+            padding: 20px 20px; /* més altura, més quadrat */
             border: 1px solid #000;
-            border-radius: 0; /* cantons rectes */
+            border-radius: 0;
             background-color: #fff;
             color: #000;
             text-decoration: none;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
             transition: background-color 0.2s ease;
+            min-width: 120px; /* assegurar certa amplària */
         }
         .btn:hover {
             background-color: #e6e6e6;
         }
 
-        /* Zona de la llicència: text + imatge petita */
+        /* Llicència: text + imatge + marc de línies separades */
         .license {
-            margin-top: 36px;
-            display: flex;
+            position: relative;
+            padding: 20px 10px;
+            display: inline-flex;
             flex-direction: column;
             align-items: center;
         }
+        /* Línies independents */
+        .license::before,
+        .license::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 0;
+            border-top: 1px solid #000;
+        }
+        .license::before { top: 0; }
+        .license::after { bottom: 0; }
+        .license > .left-line,
+        .license > .right-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1px solid #000;
+        }
+        .license > .left-line { left: 0; }
+        .license > .right-line { right: 0; }
+
         .license-text {
             font-size: 0.95em;
             color: #333;
             margin-bottom: 6px;
             line-height: 1.2;
+            text-align: center;
         }
         .license a img {
-            width: 48px;   /* imatge molt més xicoteta */
+            width: 48px;
             height: auto;
             display: block;
         }
 
-        /* Peu de pàgina (opcional, es pot deixar buit o afegir-hi altres notes) */
-        footer {
-            margin-top: 26px;
-            font-size: 0.85em;
-            color: #444;
-        }
-
-        /* Respondre bé en pantalles petites */
+        /* Responsive */
         @media (max-width: 420px) {
             h1 { font-size: 2.2em; }
-            h2 { font-size: 1em; margin-bottom: 40px; }
+            h2 { font-size: 1em; margin-bottom: 30px; }
+            .autor { font-size: 1.1em; margin-bottom: 40px; }
             .emblema { width: 100px; }
             .logo-unio { width: 48px; }
             .license a img { width: 40px; }
@@ -113,8 +138,8 @@
 
     <h1>Juan Camilo</h1>
     <h2>Pasdoble-sonata per a banda simfònica</h2>
+    <div class="autor">Xavier Garí Zanón</div>
 
-    <!-- Imatges en columna (emblema dalt, logo baix) -->
     <div class="logos">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
@@ -122,14 +147,14 @@
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
 
-    <!-- Botons -->
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <!-- Llicència: text (damunt) + imatge clicable cap a la pàgina oficial -->
     <div class="license" aria-label="Llicència">
+        <div class="left-line"></div>
+        <div class="right-line"></div>
         <div class="license-text">
             © Xavier Garí Zanón. 2025, València.<br>
             Llicència Creative Commons CC BY-NC-ND 4.0
@@ -139,11 +164,6 @@
                  alt="Llicència Creative Commons CC BY-NC-ND 4.0">
         </a>
     </div>
-
-    <footer>
-        <!-- Si vols mantindre la mateixa línia també al peu, pots descomentar -->
-        <!-- © Xavier Garí Zanón. 2025, València. -->
-    </footer>
 
 </body>
 </html>
