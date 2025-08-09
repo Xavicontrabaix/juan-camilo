@@ -45,7 +45,7 @@
         .separator::before,
         .separator::after {
             content: "";
-            width: 60px; /* més curt encara */
+            width: 60px;
             height: 0.5px;
             background-color: rgba(0,0,0,0.15);
         }
@@ -54,7 +54,7 @@
             color: rgba(0,0,0,0.35);
         }
 
-        /* Botons bisellats, fons integrat amb el de la pàgina */
+        /* Botons bisellats, fons integrat amb el de la pàgina, serif */
         .button-container {
             display: flex;
             justify-content: center;
@@ -62,18 +62,19 @@
             margin: 80px 0;
         }
         .btn {
-            display:inline-block;
-            font-size: 1.1em; /* text més xicotet */
-            padding: 24px 22px; /* lleugerament més compacte */
-            border: 1px solid rgba(0,0,0,0.4); /* línia fina */
+            display: inline-block;
+            font-family: 'Garamond', serif;
+            font-size: 1.1em;
+            padding: 28px 28px; /* més espai intern */
+            border: 1px solid rgba(0,0,0,0.4);
             border-radius: 0;
             clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
-            background-color: transparent; /* mateix color que el fons */
+            background-color: transparent;
             color: #4a5568;
             text-decoration: none;
             box-shadow: none;
             transition: all 0.3s ease;
-            min-width: 140px;
+            min-width: 150px; /* lleugerament més ample */
         }
         .btn:hover {
             background: linear-gradient(135deg, #4a5568, #6b7280);
@@ -155,7 +156,7 @@
             .autor { font-size: 1.1em; margin-bottom: 40px; }
             .emblema { width: 78px; }
             .logo-unio { width: 38px; }
-            .btn { font-size: 1em; padding: 20px 18px; min-width: 110px; }
+            .btn { font-size: 1em; padding: 22px 20px; min-width: 120px; }
             .license a img { width: 40px; }
         }
     </style>
