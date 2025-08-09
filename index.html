@@ -1,162 +1,161 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Juan Camilo - Pasdoble-sonata</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasdoble "El meu pasdoble"</title>
     <style>
         body {
-            font-family: "Times New Roman", Times, serif;
+            font-family: 'Times New Roman', serif;
+            background-color: #ffffff;
+            color: #333333;
             text-align: center;
-            background-color: #fcfcfc;
-            color: #000;
             margin: 0;
-            padding: 40px;
+            padding: 0;
         }
 
         h1 {
-            font-size: 3em;
-            margin: 0 0 12px 0;
+            font-size: 2.8em;
             font-weight: bold;
-        }
-        h2 {
-            font-size: 1.1em;
-            margin: 0 0 40px 0;
-            font-style: normal;
-            font-weight: normal;
-        }
-        .autor {
-            font-size: 1.3em;
-            font-weight: normal;
-            margin: 0 0 60px 0;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #333333;
         }
 
-        .logos {
+        h2 {
+            font-size: 1.3em;
+            font-weight: normal;
+            margin-bottom: 15px;
+            color: #333333;
+        }
+
+        .author {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 40px;
+            color: #333333;
+        }
+
+        .image-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            gap: 10px; /* distància reduïda entre emblema i logo */
+            margin-bottom: 50px;
         }
-        .emblema {
-            width: 120px;
-            max-width: 40%;
+
+        .image-container img {
+            max-width: 180px;
             height: auto;
-            margin-bottom: 3px;
         }
-        .logo-unio {
-            width: 60px;
-            max-width: 25%;
-            height: auto;
-            margin: 40px 0;
+
+        .logo {
+            max-width: 90px;
+            margin: 20px 0;
         }
 
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 25px; /* distància entre botons reduïda */
-            margin-top: 30px;
-            margin-bottom: 80px;
-        }
-        .btn {
-            display:inline-block;
-            font-size: 1.3em;
-            padding: 30px 24px;
-            border: 2px solid #666; /* gris suau */
-            border-radius: 0;
-            background-color: #fff;
-            color: #666; /* text gris suau */
-            text-decoration: none;
-            box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            min-width: 130px;
-        }
-        .btn:hover {
-            background-color: #e6e6e6;
-            transform: translateY(-2px);
+            gap: 25px; /* separació entre botons */
+            margin-bottom: 80px; /* espai abans de la llicència */
         }
 
-        .license {
-            position: relative;
-            padding: 20px 25px;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 280px;
+        .btn {
+            background-color: white;
+            border: 3px solid #333333;
+            padding: 18px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            color: #333333;
+            width: 140px;
+            height: 70px;
         }
-        .license::before,
-        .license::after {
+
+        .btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .license-container {
+            display: inline-block;
+            padding: 15px 25px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .license-container::before,
+        .license-container::after {
             content: "";
             position: absolute;
-            left: 15px;
-            right: 15px;
-            height: 0;
-            border-top: 1px solid #000; /* línia fina */
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #333333;
         }
-        .license::before { top: 0; }
-        .license::after { bottom: 0; }
-        .license > .left-line,
-        .license > .right-line {
+
+        .license-container::before {
+            top: 0;
+        }
+
+        .license-container::after {
+            bottom: 0;
+        }
+
+        .license-container span::before,
+        .license-container span::after {
+            content: "";
             position: absolute;
-            top: 15px;
-            bottom: 15px;
-            width: 0;
-            border-left: 1px solid #000; /* línia fina */
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #333333;
         }
-        .license > .left-line { left: 0; }
-        .license > .right-line { right: 0; }
+
+        .license-container span::before {
+            left: 0;
+        }
+
+        .license-container span::after {
+            right: 0;
+        }
 
         .license-text {
-            font-size: 0.85em;
-            color: #333;
-            margin-bottom: 6px;
-            line-height: 1.2;
-            text-align: center;
-        }
-        .license a img {
-            width: 48px;
-            height: auto;
-            display: block;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #333333;
         }
 
-        @media (max-width: 420px) {
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1em; margin-bottom: 30px; }
-            .autor { font-size: 1.1em; margin-bottom: 40px; }
-            .emblema { width: 100px; }
-            .logo-unio { width: 48px; }
-            .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
-            .license a img { width: 40px; }
+        .license-container img {
+            max-width: 90px;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-    <h1>Juan Camilo</h1>
-    <h2>Pasdoble-sonata per a banda simfònica</h2>
-    <div class="autor">Xavier Garí Zanón</div>
+    <h1>El meu pasdoble</h1>
+    <h2>Subtítol de l'obra</h2>
+    <div class="author">Xavi Contrabaix</div>
 
-    <div class="logos">
-        <img class="emblema" alt="Emblema personal"
-             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
-        <img class="logo-unio" alt="Logo Unió Musical l'Horta"
-             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png" alt="Emblema personal">
+        <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG" alt="Logo Unió Musical" class="logo">
     </div>
 
     <div class="button-container">
-        <a class="btn" href="#" role="button">Veure partitura</a>
-        <a class="btn" href="#" role="button">Escoltar àudio</a>
+        <button class="btn">Àudio</button>
+        <button class="btn">Partitura</button>
     </div>
 
-    <div class="license" aria-label="Llicència">
-        <div class="left-line"></div>
-        <div class="right-line"></div>
+    <div class="license-container">
+        <span></span>
         <div class="license-text">
-            © Xavier Garí Zanón. 2025, València.<br>
-            Llicència Creative Commons CC BY-NC-ND 4.0
+            Aquesta obra està subjecta a una llicència de Creative Commons Reconeixement-NoComercial-SenseObresDerivades 4.0 Internacional
         </div>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
-            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
-                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank">
+            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png" alt="Llicència Creative Commons">
         </a>
     </div>
 
