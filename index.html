@@ -1,73 +1,149 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasdoble L'Hort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juan Camilo - Pasdoble-sonata</title>
     <style>
+        /* Tipografia i colors generals */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Times New Roman", Times, serif;
             text-align: center;
+            background-color: #f9f9f9;
+            color: #000;
             margin: 0;
-            padding: 0;
+            padding: 40px;
         }
+
+        /* Títol i subtítol */
         h1 {
             font-size: 3em;
+            margin: 0 0 12px 0;
             font-weight: bold;
-            margin-bottom: 15px;
         }
         h2 {
-            font-size: 1.3em;
+            font-size: 1.1em;
+            margin: 0 0 60px 0; /* espai ampliat entre subtítol i imatges */
+            font-style: normal;
             font-weight: normal;
-            margin-bottom: 40px;
         }
-        img {
-            max-width: 300px;
+
+        /* Contenidor d'imatges (columna vertical) */
+        .logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .emblema {
+            width: 120px;
+            max-width: 40%;
+            height: auto;
+            margin-bottom: 24px; /* espai entre emblema i logo */
+        }
+
+        .logo-unio {
+            width: 60px;       /* mida reduïda (la meitat de l'original) */
+            max-width: 25%;
+            height: auto;
+            margin: 40px 0;    /* més espai amunt i avall */
+        }
+
+        /* Botons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            display:inline-block;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: 1px solid #000;
+            border-radius: 0; /* cantons rectes */
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+            transition: background-color 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Zona de la llicència: text + imatge petita */
+        .license {
+            margin-top: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .license-text {
+            font-size: 0.95em;
+            color: #333;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+        .license a img {
+            width: 48px;   /* imatge molt més xicoteta */
             height: auto;
             display: block;
-            margin: 40px auto;
         }
-        .logo {
-            max-width: 150px;
+
+        /* Peu de pàgina (opcional, es pot deixar buit o afegir-hi altres notes) */
+        footer {
+            margin-top: 26px;
+            font-size: 0.85em;
+            color: #444;
         }
-        .buttons {
-            margin: 40px;
-        }
-        .buttons a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            border: 2px solid black;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        .buttons a:hover {
-            background-color: #f0f0f0;
-        }
-        .license {
-            margin-top: 40px;
+
+        /* Respondre bé en pantalles petites */
+        @media (max-width: 420px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1em; margin-bottom: 40px; }
+            .emblema { width: 100px; }
+            .logo-unio { width: 48px; }
+            .license a img { width: 40px; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Pasdoble L'Hort</h1>
-    <h2>Composició original de Xavi Contrabaix</h2>
+    <h1>Juan Camilo</h1>
+    <h2>Pasdoble-sonata per a banda simfònica</h2>
 
-    <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png" alt="Emblema personal">
-    <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.png" alt="Logo Unió Musical" class="logo">
-
-    <div class="buttons">
-        <a href="#">Escoltar àudio</a>
-        <a href="#">Veure partitura</a>
+    <!-- Imatges en columna (emblema dalt, logo baix) -->
+    <div class="logos">
+        <img class="emblema" alt="Emblema personal"
+             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
+        <img class="logo-unio" alt="Logo Unió Musical l'Horta"
+             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
 
-    <div class="license">
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank">
-            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png" alt="Llicència Creative Commons" style="max-width: 200px;">
+    <!-- Botons -->
+    <div class="button-container">
+        <a class="btn" href="#" role="button">Veure partitura</a>
+        <a class="btn" href="#" role="button">Escoltar àudio</a>
+    </div>
+
+    <!-- Llicència: text (damunt) + imatge clicable cap a la pàgina oficial -->
+    <div class="license" aria-label="Llicència">
+        <div class="license-text">
+            © Xavier Garí Zanón. 2025, València.<br>
+            Llicència Creative Commons CC BY-NC-ND 4.0
+        </div>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
+                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
         </a>
     </div>
+
+    <footer>
+        <!-- Si vols mantindre la mateixa línia també al peu, pots descomentar -->
+        <!-- © Xavier Garí Zanón. 2025, València. -->
+    </footer>
 
 </body>
 </html>
