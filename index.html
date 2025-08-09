@@ -1,57 +1,180 @@
-<style>
-    /* Separador decoratiu */
-    .separator {
-        position: relative;
-        margin: 40px auto;
-        width: 80%;
-        text-align: center;
-    }
-    .separator::before,
-    .separator::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 42%;
-        height: 1px;
-        background-color: rgba(0,0,0,0.1);
-    }
-    .separator::before {
-        left: 0;
-    }
-    .separator::after {
-        right: 0;
-    }
-    .separator span {
-        display: inline-block;
-        font-family: 'Garamond', serif;
-        font-size: 1.2em;
-        color: rgba(0,0,0,0.5);
-        padding: 0 4px; /* abans era 12px, ara molt més junt */
-    }
-</style>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juan Camilo - Pasdoble-sonata</title>
+    <style>
+        body {
+            font-family: "Garamond", serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #000;
+            margin: 0;
+            padding: 40px;
+        }
 
+        h1 {
+            font-size: 3em;
+            margin: 0 0 12px 0;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 1.1em;
+            margin: 0 0 40px 0;
+            font-style: normal;
+            font-weight: normal;
+        }
+        .autor {
+            font-size: 1.3em;
+            font-weight: normal;
+            margin: 0 0 60px 0;
+        }
+
+        /* Separador amb clau de sol */
+        .separator {
+            position: relative;
+            margin: 40px auto;
+            width: 80%;
+            text-align: center;
+        }
+        .separator::before,
+        .separator::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 42%;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .separator::before { left: 0; }
+        .separator::after { right: 0; }
+        .separator span {
+            display: inline-block;
+            font-size: 1.2em;
+            color: rgba(0,0,0,0.5);
+            padding: 0 4px; /* línia més junteta a la clau */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+        .btn {
+            display:inline-block;
+            font-size: 1.3em;
+            padding: 30px 24px;
+            border: 2px solid #666;
+            border-radius: 0;
+            background-color: #fff;
+            color: #666;
+            text-decoration: none;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            min-width: 130px;
+        }
+        .btn:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        .logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .emblema {
+            width: 120px;
+            max-width: 40%;
+            height: auto;
+            margin-bottom: 3px;
+        }
+        .logo-unio {
+            width: 60px;
+            max-width: 25%;
+            height: auto;
+            margin: 40px 0;
+        }
+
+        .license {
+            position: relative;
+            padding: 20px 25px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 280px;
+        }
+        .license::before,
+        .license::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            height: 0;
+            border-top: 1px solid #000;
+        }
+        .license::before { top: 0; }
+        .license::after { bottom: 0; }
+        .license > .left-line,
+        .license > .right-line {
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            width: 0;
+            border-left: 1px solid #000;
+        }
+        .license > .left-line { left: 0; }
+        .license > .right-line { right: 0; }
+
+        .license-text {
+            font-size: 0.85em;
+            color: #333;
+            margin-bottom: 6px;
+            line-height: 1.2;
+            text-align: center;
+        }
+        .license a img {
+            width: 48px;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 420px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1em; margin-bottom: 30px; }
+            .autor { font-size: 1.1em; margin-bottom: 40px; }
+            .emblema { width: 100px; }
+            .logo-unio { width: 48px; }
+            .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
+            .license a img { width: 40px; }
+        }
+    </style>
+</head>
 <body>
+
     <h1>Juan Camilo</h1>
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
     <div class="separator"><span>𝄞</span></div>
 
-    <div class="button-container">
+    <div class="logos">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
     <div class="separator"><span>𝄞</span></div>
 
-    <div class="logos">
+    <div class="button-container">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
         <img class="logo-unio" alt="Logo Unió Musical l'Horta"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
-
-    <!-- Eliminat el separador que hi havia ací -->
 
     <div class="license" aria-label="Llicència">
         <div class="left-line"></div>
@@ -65,5 +188,6 @@
                  alt="Llicència Creative Commons CC BY-NC-ND 4.0">
         </a>
     </div>
+
 </body>
 </html>
