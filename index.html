@@ -37,7 +37,7 @@
         /* Separador decoratiu */
         .separator {
             position: relative;
-            margin: 50px auto;
+            margin: 30px auto;
             width: 80%;
             text-align: center;
         }
@@ -50,26 +50,22 @@
             height: 1px;
             background-color: rgba(0,0,0,0.1);
         }
-        .separator::before {
-            left: 0;
-        }
-        .separator::after {
-            right: 0;
-        }
+        .separator::before { left: 0; }
+        .separator::after { right: 0; }
+
         .separator span {
             display: inline-block;
             font-family: 'Garamond', serif;
-            font-size: 2em; /* Mida més gran */
+            font-size: 1em;
             color: rgba(0,0,0,0.5);
             padding: 0 8px;
-            line-height: 0.8; /* Centrat verticalment */
         }
 
         .button-container {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 60px 0;
+            margin: 50px 0;
         }
         .btn {
             display:inline-block;
@@ -95,7 +91,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
         .emblema {
             width: 120px;
@@ -115,7 +111,7 @@
             flex-direction: column;
             align-items: center;
             max-width: 280px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .license::before,
         .license::after {
@@ -169,14 +165,14 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <div class="separator"><span>𝄢</span></div>
+    <div class="separator"><span>—— ✦ ——</span></div>
 
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <div class="separator"><span>𝄢</span></div>
+    <div class="separator"><span>—— ✦ ——</span></div>
 
     <div class="logos">
         <img class="emblema" alt="Emblema personal"
