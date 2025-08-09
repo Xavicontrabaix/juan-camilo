@@ -34,7 +34,7 @@
             margin: 0 0 60px 0;
         }
 
-        /* Separador amb estrella buida */
+        /* Separador amb estrella buida i línies més curtes */
         .separator {
             display: flex;
             align-items: center;
@@ -45,7 +45,7 @@
         .separator::before,
         .separator::after {
             content: "";
-            width: 100px;
+            width: 80px; /* línies més curtes */
             height: 1px;
             background-color: rgba(0,0,0,0.2);
         }
@@ -54,7 +54,7 @@
             color: rgba(0,0,0,0.5);
         }
 
-        /* Botons */
+        /* Botons bisellats amb línia fina */
         .button-container {
             display: flex;
             justify-content: center;
@@ -65,8 +65,8 @@
             display:inline-block;
             font-size: 1.3em;
             padding: 28px 26px;
-            border: 1px solid #4a5568;
-            border-radius: 0;
+            border: 1px solid #4a5568; /* línia més fina */
+            border-radius: 0; /* eliminem rodó per aplicar bisell */
             clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
             background-color: #fff;
             color: #4a5568;
