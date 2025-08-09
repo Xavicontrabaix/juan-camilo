@@ -81,26 +81,26 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Conjunt imatges + llicència com un sol bloc */
+        /* Logos i integració amb la llicència */
         .logos-license-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 18px;
+            gap: 6px; /* més junts amb la llicència */
             margin-top: 50px;
         }
         .logos {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
         }
         .emblema {
-            width: 88px;
+            width: 88px; /* lleugerament més petit */
             height: auto;
+            margin-bottom: 6px;
         }
         .logo-unio {
-            width: 44px;
+            width: 44px; /* lleugerament més petit */
             height: auto;
         }
 
@@ -114,6 +114,8 @@
             max-width: 280px;
             background: transparent;
         }
+
+        /* Línies independents més fines i suaus */
         .line-top, .line-bottom {
             position: absolute;
             height: 1px;
@@ -123,6 +125,7 @@
         }
         .line-top { top: 0; }
         .line-bottom { bottom: 0; }
+
         .line-left, .line-right {
             position: absolute;
             width: 1px;
@@ -132,6 +135,7 @@
         }
         .line-left { left: 0; }
         .line-right { right: 0; }
+
         .license-text {
             font-size: 0.85em;
             color: #333;
@@ -145,11 +149,10 @@
             display: block;
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 420px) {
             h1 { font-size: 2.2em; }
             h2 { font-size: 1em; margin-bottom: 30px; }
             .autor { font-size: 1.1em; margin-bottom: 40px; }
-            .logos-license-container { flex-direction: column; gap: 14px; }
             .emblema { width: 78px; }
             .logo-unio { width: 38px; }
             .btn { font-size: 1.1em; padding: 22px 20px; min-width: 110px; }
@@ -163,14 +166,14 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <div class="separator"><span>✦</span></div>
+    <div class="separator"><span>✧</span></div>
 
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <div class="separator"><span>✦</span></div>
+    <div class="separator"><span>✧</span></div>
 
     <div class="logos-license-container">
         <div class="logos">
