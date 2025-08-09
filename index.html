@@ -23,21 +23,20 @@
         }
         h2 {
             font-size: 1.2em;
-            margin: 0 0 90px 0; /* Duplicat */
+            margin: 0 0 90px 0;
             font-weight: normal;
         }
         .autor {
             font-size: 1.4em;
             font-weight: normal;
-            margin: 0 0 120px 0; /* Duplicat */
+            margin: 0 0 120px 0;
         }
 
-        /* Separador amb línies als costats */
         .separator {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 60px auto; /* Duplicat */
+            margin: 60px auto;
             width: 80%;
         }
         .separator::before,
@@ -52,12 +51,11 @@
             color: rgba(0,0,0,0.6);
         }
 
-        /* Botons */
         .button-container {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 100px 0; /* Duplicat */
+            margin: 100px 0;
         }
         .btn {
             display:inline-block;
@@ -79,33 +77,40 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Imatges */
-        .logos {
+        /* Conjunt imatges + llicència integrats */
+        .license-block {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 40px; /* Duplicat */
+            gap: 8px; /* molt més junt */
+            margin-top: 20px;
         }
+
         .emblema {
-            width: 120px;
+            width: 100px; /* lleugerament més xicotet */
             height: auto;
-            margin-bottom: 40px; /* Duplicat */
         }
         .logo-unio {
-            width: 60px;
+            width: 50px; /* lleugerament més xicotet */
             height: auto;
-            margin-top: 40px; /* Duplicat */
+        }
+
+        /* Línies ornamentals que emmarquen */
+        .license-frame-line {
+            width: 120px;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
         }
 
         /* Llicència */
         .license {
-            position: relative;
             padding: 20px 25px;
             display: inline-flex;
             flex-direction: column;
             align-items: center;
             max-width: 280px;
-            margin-top: 40px; /* Duplicat */
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 6px;
+            background-color: #fff;
         }
         .license-text {
             font-size: 0.85em;
@@ -124,10 +129,11 @@
             h1 { font-size: 2.2em; }
             h2 { font-size: 1em; margin-bottom: 60px; }
             .autor { font-size: 1.1em; margin-bottom: 80px; }
-            .emblema { width: 100px; margin-bottom: 30px; }
-            .logo-unio { width: 48px; margin-top: 30px; }
+            .emblema { width: 85px; }
+            .logo-unio { width: 42px; }
             .btn { font-size: 1.1em; padding: 22px 20px; min-width: 110px; }
             .license a img { width: 40px; }
+            .license-frame-line { width: 90px; }
         }
     </style>
 </head>
@@ -146,22 +152,28 @@
 
     <div class="separator"><span>✧</span></div>
 
-    <div class="logos">
+    <!-- Bloc integrat imatges + llicència -->
+    <div class="license-block">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
+
+        <div class="license-frame-line"></div>
+
+        <div class="license" aria-label="Llicència">
+            <div class="license-text">
+                © Xavier Garí Zanón. 2025, València.<br>
+                Llicència Creative Commons CC BY-NC-ND 4.0
+            </div>
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
+                <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
+                     alt="Llicència Creative Commons CC BY-NC-ND 4.0">
+            </a>
+        </div>
+
+        <div class="license-frame-line"></div>
+
         <img class="logo-unio" alt="Logo Unió Musical l'Horta"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
-    </div>
-
-    <div class="license" aria-label="Llicència">
-        <div class="license-text">
-            © Xavier Garí Zanón. 2025, València.<br>
-            Llicència Creative Commons CC BY-NC-ND 4.0
-        </div>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
-            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
-                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
-        </a>
     </div>
 
 </body>
