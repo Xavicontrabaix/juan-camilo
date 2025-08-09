@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Juan Camilo - Pasdoble-sonata</title>
-    <link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Garamond&family=Lora&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Garamond', serif;
+            font-family: 'Lora', serif;
             text-align: center;
-            background-color: #faf9f6;
+            background: linear-gradient(to bottom, #faf9f6, #f1f1f1);
             color: #333;
             margin: 0;
             padding: 50px;
@@ -17,45 +17,49 @@
         }
 
         h1 {
+            font-family: 'Garamond', serif;
             font-size: 3em;
-            margin: 0 0 30px 0;
+            margin: 0 0 15px 0;
             font-weight: bold;
         }
         h2 {
+            font-family: 'Garamond', serif;
             font-size: 1.2em;
-            margin: 0 0 90px 0;
+            margin: 0 0 45px 0;
             font-weight: normal;
         }
         .autor {
             font-size: 1.4em;
             font-weight: normal;
-            margin: 0 0 120px 0;
+            margin: 0 0 60px 0;
         }
 
+        /* Separador amb estrella buida */
         .separator {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 60px auto;
-            width: 80%;
+            gap: 10px;
+            margin: 80px 0;
         }
         .separator::before,
         .separator::after {
             content: "";
             flex: 1;
-            border-bottom: 1px solid rgba(0,0,0,0.2);
+            height: 1px;
+            background-color: rgba(0,0,0,0.2);
         }
         .separator span {
-            margin: 0 15px;
             font-size: 1.2em;
-            color: rgba(0,0,0,0.6);
+            color: rgba(0,0,0,0.5);
         }
 
+        /* Botons */
         .button-container {
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 100px 0;
+            margin: 80px 0;
         }
         .btn {
             display:inline-block;
@@ -77,39 +81,65 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Bloc imatges + llicència */
-        .license-block {
+        /* Logos i integració amb la llicència */
+        .logos-license-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
-            margin-top: 20px;
+            gap: 10px; /* menys separació per integrar més */
+            margin-top: 60px;
         }
-
+        .logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .emblema {
             width: 100px;
             height: auto;
+            margin-bottom: 10px;
         }
         .logo-unio {
             width: 50px;
             height: auto;
         }
 
-        /* Llicència */
+        /* Llicència amb 4 línies separades i cantonades obertes */
         .license {
+            position: relative;
             padding: 20px 25px;
             display: inline-flex;
             flex-direction: column;
             align-items: center;
             max-width: 280px;
-            border: 1px solid rgba(0,0,0,0.3);
-            border-radius: 6px;
-            background-color: #faf9f6;
+            background: transparent;
         }
+
+        /* Línies independents */
+        .line-top, .line-bottom {
+            position: absolute;
+            height: 1px;
+            background-color: rgba(0,0,0,0.4);
+            left: 15px;
+            right: 15px;
+        }
+        .line-top { top: 0; }
+        .line-bottom { bottom: 0; }
+
+        .line-left, .line-right {
+            position: absolute;
+            width: 1px;
+            background-color: rgba(0,0,0,0.4);
+            top: 15px;
+            bottom: 15px;
+        }
+        .line-left { left: 0; }
+        .line-right { right: 0; }
+
         .license-text {
             font-size: 0.85em;
             color: #333;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             line-height: 1.2;
             text-align: center;
         }
@@ -121,9 +151,9 @@
 
         @media (max-width: 420px) {
             h1 { font-size: 2.2em; }
-            h2 { font-size: 1em; margin-bottom: 60px; }
-            .autor { font-size: 1.1em; margin-bottom: 80px; }
-            .emblema { width: 85px; }
+            h2 { font-size: 1em; margin-bottom: 30px; }
+            .autor { font-size: 1.1em; margin-bottom: 40px; }
+            .emblema { width: 90px; }
             .logo-unio { width: 42px; }
             .btn { font-size: 1.1em; padding: 22px 20px; min-width: 110px; }
             .license a img { width: 40px; }
@@ -136,36 +166,37 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <!-- Separador dalt -->
-    <div class="separator"><span>✧</span></div>
+    <div class="separator"><span>☆</span></div>
 
-    <!-- Botons -->
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <!-- Separador baix -->
-    <div class="separator"><span>✧</span></div>
+    <div class="separator"><span>☆</span></div>
 
-    <!-- Bloc imatges + llicència -->
-    <div class="license-block">
-        <img class="emblema" alt="Emblema personal"
-             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
+    <div class="logos-license-container">
+        <div class="logos">
+            <img class="emblema" alt="Emblema personal"
+                src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
+            <img class="logo-unio" alt="Logo Unió Musical l'Horta"
+                src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
+        </div>
 
         <div class="license" aria-label="Llicència">
+            <div class="line-top"></div>
+            <div class="line-bottom"></div>
+            <div class="line-left"></div>
+            <div class="line-right"></div>
             <div class="license-text">
                 © Xavier Garí Zanón. 2025, València.<br>
                 Llicència Creative Commons CC BY-NC-ND 4.0
             </div>
             <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
                 <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
-                     alt="Llicència Creative Commons CC BY-NC-ND 4.0">
+                    alt="Llicència Creative Commons CC BY-NC-ND 4.0">
             </a>
         </div>
-
-        <img class="logo-unio" alt="Logo Unió Musical l'Horta"
-             src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
 
 </body>
