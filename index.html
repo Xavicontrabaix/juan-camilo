@@ -34,11 +34,34 @@
             margin: 0 0 60px 0;
         }
 
+        /* Separador decoratiu */
         .separator {
-            height: 1px;
-            background-color: rgba(0,0,0,0.1);
+            position: relative;
             margin: 50px auto;
             width: 80%;
+            text-align: center;
+        }
+        .separator::before,
+        .separator::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .separator::before {
+            left: 0;
+        }
+        .separator::after {
+            right: 0;
+        }
+        .separator span {
+            display: inline-block;
+            font-family: 'Garamond', serif;
+            font-size: 1.2em;
+            color: rgba(0,0,0,0.5);
+            padding: 0 12px;
         }
 
         .button-container {
@@ -145,14 +168,14 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
-    <div class="separator"></div>
+    <div class="separator"><span>𝄞</span></div>
 
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
-    <div class="separator"></div>
+    <div class="separator"><span>𝄞</span></div>
 
     <div class="logos">
         <img class="emblema" alt="Emblema personal"
@@ -161,7 +184,7 @@
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
     </div>
 
-    <div class="separator"></div>
+    <div class="separator"><span>𝄞</span></div>
 
     <div class="license" aria-label="Llicència">
         <div class="left-line"></div>
