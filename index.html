@@ -9,7 +9,7 @@
         body {
             font-family: 'Garamond', serif;
             text-align: center;
-            background-color: #faf9f6; /* Fons uniforme */
+            background-color: #faf9f6;
             color: #333;
             margin: 0;
             padding: 50px;
@@ -77,7 +77,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        /* Conjunt imatges + llicència integrats */
+        /* Bloc imatges + llicència */
         .license-block {
             display: flex;
             flex-direction: column;
@@ -95,14 +95,6 @@
             height: auto;
         }
 
-        /* Línia ornamental */
-        .license-frame-line {
-            width: 140px;
-            height: 12px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 12"><path d="M0 6 Q35 0 70 6 T140 6" fill="transparent" stroke="rgba(0,0,0,0.3)" stroke-width="1"/></svg>') no-repeat center;
-            background-size: contain;
-        }
-
         /* Llicència */
         .license {
             padding: 20px 25px;
@@ -112,7 +104,7 @@
             max-width: 280px;
             border: 1px solid rgba(0,0,0,0.3);
             border-radius: 6px;
-            background-color: #faf9f6; /* Mateix color que el fons */
+            background-color: #faf9f6;
         }
         .license-text {
             font-size: 0.85em;
@@ -135,7 +127,6 @@
             .logo-unio { width: 42px; }
             .btn { font-size: 1.1em; padding: 22px 20px; min-width: 110px; }
             .license a img { width: 40px; }
-            .license-frame-line { width: 110px; }
         }
     </style>
 </head>
@@ -145,21 +136,22 @@
     <h2>Pasdoble-sonata per a banda simfònica</h2>
     <div class="autor">Xavier Garí Zanón</div>
 
+    <!-- Separador dalt -->
     <div class="separator"><span>✧</span></div>
 
+    <!-- Botons -->
     <div class="button-container">
         <a class="btn" href="#" role="button">Veure partitura</a>
         <a class="btn" href="#" role="button">Escoltar àudio</a>
     </div>
 
+    <!-- Separador baix -->
     <div class="separator"><span>✧</span></div>
 
-    <!-- Bloc integrat imatges + llicència -->
+    <!-- Bloc imatges + llicència -->
     <div class="license-block">
         <img class="emblema" alt="Emblema personal"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/emblema_personal.png">
-
-        <div class="license-frame-line"></div>
 
         <div class="license" aria-label="Llicència">
             <div class="license-text">
@@ -171,8 +163,6 @@
                      alt="Llicència Creative Commons CC BY-NC-ND 4.0">
             </a>
         </div>
-
-        <div class="license-frame-line"></div>
 
         <img class="logo-unio" alt="Logo Unió Musical l'Horta"
              src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/logo_union_musical.PNG">
