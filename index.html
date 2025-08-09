@@ -41,7 +41,7 @@
             width: 120px;
             max-width: 40%;
             height: auto;
-            margin-bottom: 6px; /* abans 12px, ara la meitat */
+            margin-bottom: 6px;
         }
         .logo-unio {
             width: 60px;
@@ -53,25 +53,26 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 50px; /* abans 25px, ara el doble */
+            gap: 100px; /* abans 50px, ara el doble */
             margin-top: 30px;
             margin-bottom: 80px;
         }
         .btn {
             display:inline-block;
-            font-size: 1em;
-            padding: 24px 16px;
-            border: 1px solid #000;
+            font-size: 1.3em; /* text més gran */
+            padding: 30px 24px; /* més alt i ample */
+            border: 2px solid #000; /* vore més gruixuda */
             border-radius: 0;
             background-color: #fff;
             color: #000;
             text-decoration: none;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
-            transition: background-color 0.2s ease;
-            min-width: 100px;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.25); /* ombra més forta */
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            min-width: 130px;
         }
         .btn:hover {
             background-color: #e6e6e6;
+            transform: translateY(-2px);
         }
 
         .license {
@@ -89,7 +90,7 @@
             left: 15px;
             right: 15px;
             height: 0;
-            border-top: 1px solid #000;
+            border-top: 2px solid #000; /* vore més gruixuda */
         }
         .license::before { top: 0; }
         .license::after { bottom: 0; }
@@ -99,7 +100,7 @@
             top: 15px;
             bottom: 15px;
             width: 0;
-            border-left: 1px solid #000;
+            border-left: 2px solid #000; /* vore més gruixuda */
         }
         .license > .left-line { left: 0; }
         .license > .right-line { right: 0; }
@@ -123,7 +124,7 @@
             .autor { font-size: 1.1em; margin-bottom: 40px; }
             .emblema { width: 100px; }
             .logo-unio { width: 48px; }
-            .btn { padding: 20px 14px; min-width: 90px; }
+            .btn { font-size: 1.1em; padding: 24px 20px; min-width: 110px; }
             .license a img { width: 40px; }
         }
     </style>
@@ -154,10 +155,4 @@
             Llicència Creative Commons CC BY-NC-ND 4.0
         </div>
         <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ca" target="_blank" rel="noopener noreferrer">
-            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-web/main/imatges/llicencia-cc.png"
-                 alt="Llicència Creative Commons CC BY-NC-ND 4.0">
-        </a>
-    </div>
-
-</body>
-</html>
+            <img src="https://raw.githubusercontent.com/xavicontrabaix/recursos-
